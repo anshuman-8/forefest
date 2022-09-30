@@ -6,9 +6,10 @@ import {AiOutlineHeart,AiFillHeart} from 'react-icons/ai';
 
 function EventCard(prop) {
   const {title,description,owner,ownerIcon,location,date,time,price,image,isFav} = prop;
+
   return (
-    <div className='inline-block p-1 my-3 mx-4'>
-      <div className='flex flex-row h-52  border-2 border-primaryDark rounded-xl text-white hover:shadow-lg hover:shadow-primary hover:scale-105 hover:duration-100'>
+    <div className='inline-block p-1 my-6 mx-8'>
+      <div className='flex flex-row  border-2 border-primaryDark rounded-xl text-white hover:shadow-lg hover:shadow-primary hover:scale-105 hover:duration-100'>
 
         <div className='w-72 rounded-l-lg relative'>
           <div className='absolute top-2 left-2 h-6 w-6 z-10 hover:scale-110'>{isFav?<AiFillHeart fill='red' size={'24'}/>:<AiOutlineHeart size={'24'}/>}</div>
@@ -29,7 +30,7 @@ function EventCard(prop) {
             </div>
 
              <div className='flex flex-row items-center'>
-              <div className='my-1 rounded-full w-6 mx-1'><Image src={ownerIcon} width={'24px'} height={'24px'} className='w-full h-full align-middle border-none'/></div>
+              <div className='w-6 mx-1'><Image src={image} width={'24px'} height={'24px'} className='w-full rounded-full h-full align-middle border-none'/></div>
               <span className='my-auto font-medium'>{owner}</span>
              </div>
           </div>

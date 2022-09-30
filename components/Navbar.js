@@ -10,6 +10,9 @@ function Navbar() {
           <div className='flex items-center'>
             <a href='/' className='mx-5 my-auto text-primary '><Image src={ForefestTitle} height="79" width='186'></Image></a>
           </div>
+          <div>
+            <button>Create Event</button>
+          </div>
         </div>
       </nav>
     </div>
