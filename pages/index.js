@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import Navbar from '../components/Navbar'
+import EventCard from '../components/EventCard';
 
 export default function Home() {
   const [isDark, setIsDark] = useState(true);
@@ -17,6 +18,7 @@ export default function Home() {
       
       <main className='dark:bg-bkg h-screen text-primary'>
         <Navbar/>
+        <EventCard/>
       </main>
 
       <footer>
