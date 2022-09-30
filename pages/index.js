@@ -1,6 +1,5 @@
 import {useState, useEffect} from 'react'
-import Navbar from '../components/Navbar'
-import EventCard from '../components/EventCard';
+import HomePage from '../components/HomePage';
 
 export default function Home() {
   const [isDark, setIsDark] = useState(true);
@@ -16,9 +15,8 @@ export default function Home() {
   return (
     <div className={isDark?'dark':""}>
       
-      <main className='dark:bg-bkg h-screen text-primary'>
-        <Navbar/>
-        <EventCard/>
+      <main className='bg-bkg h-max dark:bg-bkg  text-primary'>
+        <HomePage/>
       </main>
 
       <footer>
