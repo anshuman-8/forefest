@@ -5,7 +5,7 @@ import DummyData from './dummyevent.json';
 function EventsDisplay() {
   return (
     <div id='events'>
-        <div className='grid grid-cols-2 lg:grid-cols-3  mx-5'>
+        <div className='grid grid-cols-1 lg:grid-cols-3  mx-5'>
             {DummyData.map((event) => (
                 <EventCard
                     key={event.id.$oid}
