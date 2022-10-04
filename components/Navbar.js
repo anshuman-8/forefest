@@ -23,8 +23,8 @@ function Navbar() {
             
           </div>
           :<div className='flex flex-row'>
-            <div className='px-3 py-2 border-2 border-primary rounded-2xl hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-bkg mx-3 hover:scale-105 active:scale-100'> <Link href={"/login"} className=''>Login</Link></div>
-            <div className='px-3 py-2 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500 text-bkg mx-3 hover:scale-105 active:scale-100'><Link href='/signup' className=''>Sign up</Link></div>
+            <div className='px-3 py-2 border-2 border-primary rounded-2xl hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-bkg mx-3 hover:scale-105 active:scale-100 cursor-pointer'> <Link href={"/login"} className=''>Login</Link></div>
+            <div className='px-3 py-2 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500 text-bkg mx-3 hover:scale-105 active:scale-100 cursor-pointer'><Link href='/signup' className=''>Sign up</Link></div>
           </div>}
 
           </div>

@@ -24,19 +24,19 @@ function EventCard(prop) {
 
 
         <div className=' rounded-l-lg relative'>
-          <button onClick={console.log("like")} className='absolute p-1 top-2 left-2 h-8 w-8 z-10 bg-slate-500/50 rounded-full shadow-lg hover:scale-110'>{isFav?<AiFillHeart fill='red' size={'26'}/>:<AiOutlineHeart size={'24'}/>}</button>
+          <button onClick={()=>console.log("like")} className='absolute p-1 top-2 left-2 h-8 w-8 z-10 bg-slate-500/50 rounded-full shadow-lg hover:scale-110'>{isFav?<AiFillHeart fill='red' size={'26'}/>:<AiOutlineHeart size={'24'}/>}</button>
           <img src={image} height={'200px'} width={'300px'} className="object-cover inset-0 w-full h-full align-middle border-none rounded-t-lg sm:rounded-t-none sm:rounded-l-lg"/>
         </div>
 
-        <div className='flex flex-col min-w-[180px]  px-3 py-2 bg-slate-400/30 hover:bg-blend-darken'>
+        <div className='flex flex-col min-w-[200px]  px-3 py-2 bg-slate-400/30 hover:bg-blend-darken'>
 
-          <div className='text-2xl h-20 font-semibold mb-2 mt-3'>{title.substring(0,30)}</div>
+          <div className='line-clamp-2 capitalize text-2xl h-16 font-semibold mb-2 mt-3'>{title}</div>
 
           {/* {description!==null?<div className='font-light text-sm mb-1 h-16'>{description.substring(0,150)}</div>:<div className='h-10'></div>}  */}
-          {/* must be of 150 characters */}
-          <div className='flex flex-row items-center'>
+          
+          <div className='flex flex-row items-center my-1'>
               <div className='w-6 mx-1 '><Image src={ownerIcon} width={'24px'} height={'24px'} className='w-full rounded-full h-full align-middle border-none'/></div>
-              <span className='my-auto font-medium'>{owner}</span>
+              <span className='my-auto font-medium truncate'>{owner}</span>
           </div>
           <div className=' justify-between my-2'>
             <div className='flex flex-col'> 
@@ -46,7 +46,7 @@ function EventCard(prop) {
           </div>
 
           <div className='flex flex-row justify-between'>
-            <span className='font-medium '>{location===null?"Virtual":location}</span>
+            <span className='truncate font-medium '>{location===null?"Virtual":location}</span>
             <div className='font-medium mx-2'>{(price===null || price===0)?'Free':"Rs. "+price}</div>
           </div>
         </div>
