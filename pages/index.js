@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import HomePage from '../components/HomePage';
+import Footer from '../components/Footer';
 
 export default function Home() {
   const [isDark, setIsDark] = useState(true);
@@ -19,7 +20,9 @@ export default function Home() {
         <HomePage/>
       </main>
 
-      <footer>
+      <footer className='bg-slate-900 min-h-fit'>
+        <div className='h-32'></div>
+        <Footer/>
       </footer>
     </div>
   )

@@ -1,10 +1,13 @@
 import React from 'react'
 import EventCard from './EventCard'
 import DummyData from './dummyevent.json';
+import SearchBar from './SearchBar'
+
 
 function EventsDisplay() {
   return (
     <div id='events'>
+      <SearchBar/>
         <div className='grid grid-cols-1 lg:grid-cols-3  mx-5'>
             {DummyData.map((event) => (
                 <EventCard
